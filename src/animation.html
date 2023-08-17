@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Animation</title>
+		<style>
+			html,
+			body {
+				margin: 0;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 100vw;
+				height: 100vh;
+			}
+
+			.box {
+				width: 400px;
+				height: 2px;
+				background-color: blue;
+				margin: 250px;
+			}
+		</style>
+	</head>
+	<!--
+	<body>
+		<svg width="400" height="400" id="square">
+			<path
+				d="M 150 150 L 250 150 L 250 250 L 150 250 L 150 150"
+				stroke="blue"
+				stroke-width="2"
+				fill="none"
+			></path>
+		</svg>
+		<input type="range" min="0" max="360" value="0" id="rotation" />
+		<script>
+			const rotationInput = document.getElementById('rotation');
+
+			rotationInput.addEventListener('input', (e) => {
+				const angle = rotationInput.value;
+				gsap.to('#square', { rotation: '+=10' });
+			});
+		</script>
+	</body>
+	-->
+	<body>
+		<div style="width: 800px"><canvas id="graph"></canvas></div>
+		<div>
+			<label for="mean">Mean</label>
+			<input type="range" min="0" max="100" value="49" step="1" id="mean" />
+		</div>
+		<div>
+			<label for="variance">Variance</label>
+			<input type="range" min="-1" max="3" value="0" step="0.1" id="variance" />
+		</div>
+		<script src="animation.js" type="module"></script>
+	</body>
+</html>
